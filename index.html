@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+				   user-scalable=no">
     
-    <title>reveal.js</title>
+    <title>Reconstruction of Euclidean Shapes | Sushovan Majhi</title>
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
     
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,7 +26,62 @@
   <body>
     <div class="reveal">
       <div class="slides">
-	<section>Slide 1</section>
+	<section  id="title" data-markdown>
+	  <textarea data-template>
+	    ## Reconstruction of Euclidean Shapes
+	    ### Sushovan Majhi
+	    Tulane University
+	  </textarea>
+	</section>
+
+	<section>
+	  $$\lim_{n\to\infty}n\sin{\frac{1}{n}}=1$$ is a 
+	<p class="fragment grow">grow</p>
+	<p class="fragment shrink">shrink</p>
+	<p class="fragment fade-out">fade-out</p>
+	<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+	<p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+	<p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+	<p class="fragment highlight-current-blue">blue only once</p>
+	<p class="fragment highlight-red">highlight-red</p>
+	<p class="fragment highlight-green">highlight-green</p>
+	<p class="fragment highlight-blue">highlight-blue</p>
+
+	<aside class="notes">
+	  Oh hey,
+	</aside>
+	</section>
+
+	<section>
+	  <pre><code data-trim data-noescape>
+	      (def lazy-fib
+	      (concat
+	      [0 1]
+	      <mark>((fn rfib [a b]</mark>
+              (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+	  </code></pre>
+	</section>
+	
+
+	<section data-markdown>
+	  <script type="text/template">
+	    - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
+	    - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
+	  </script>
+	</section>
+
+	<section data-background-iframe="http://smajhi.com">
+
+	  
+	</section>
+	
+	<section data-markdown>
+	  <script type="text/template">
+	    <!-- .slide: data-background="#ff0000" -->
+	    Markdown content
+	  </script>
+	</section>
+	
 	<section>Slide 2</section>
       </div>
     </div>
@@ -37,11 +93,22 @@
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+      controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'edge',
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      keyboard: true,
+      center: true,
       dependencies: [
       { src: 'plugin/markdown/marked.js' },
       { src: 'plugin/markdown/markdown.js' },
       { src: 'plugin/notes/notes.js', async: true },
-      { src: 'plugin/highlight/highlight.js', async: true }
+      { src: 'plugin/highlight/highlight.js', async: true },
+      { src: 'plugin/math/math.js',           async: true},
+      { src: 'socket.io/socket.io.js',        async: true},
+      { src: 'plugin/notes-server/client.js', async: true},    
       ]
       });
     </script>
