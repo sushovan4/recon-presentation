@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
-				   user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+				   maximum-scale=1.0, user-scalable=no">
     
     <title>Reconstruction of Euclidean Shapes | Sushovan Majhi</title>
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css">
+    <link rel="stylesheet" href="css/theme/night.css">
     
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -97,10 +97,19 @@
       controlsTutorial: true,
       controlsLayout: 'edge',
       progress: true,
+      defaultTiming: 60,
       slideNumber: true,
       hash: true,
       keyboard: true,
       center: true,
+      math: {
+      "HTML-CSS" : {webFont: "Neo-Euler"}
+      },
+      multiplex: {
+      secret: '15543908618539689692', 
+      id: '438e46f38b587904',
+      url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+      },
       dependencies: [
       { src: 'plugin/markdown/marked.js' },
       { src: 'plugin/markdown/markdown.js' },
@@ -108,6 +117,7 @@
       { src: 'plugin/highlight/highlight.js', async: true },
       { src: 'plugin/math/math.js',           async: true},
       { src: 'socket.io/socket.io.js',        async: true},
+      { src: 'plugin/multiplex/master.js', async: true },
       { src: 'plugin/notes-server/client.js', async: true},    
       ]
       });
