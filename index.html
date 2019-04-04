@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/night.css">
+    <link rel="stylesheet" href="css/theme/sush.css">
     
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -106,18 +106,19 @@
       "HTML-CSS" : {webFont: "Neo-Euler"}
       },
       multiplex: {
-      secret: null, 
+      secret: '15543908618539689692', 
       id: '438e46f38b587904',
       url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
       },
       dependencies: [
       { src: 'plugin/markdown/marked.js' },
       { src: 'plugin/markdown/markdown.js' },
-      { src: 'plugin/notes/notes.js', async: true },
       { src: 'plugin/highlight/highlight.js', async: true },
       { src: 'plugin/math/math.js',           async: true},
+
       { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
-      { src: 'plugin/multiplex/client.js', async: true},    
+      { src: 'plugin/multiplex/master.js', async: true },
+      { src: 'plugin/notes-server/client.js', async: true },
       ]
       });
     </script>
