@@ -10,21 +10,16 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/sush.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="lib/css/monokai.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-	<section id="draw-shapes">
-	 
-	</section>
-	
-	<section  id="title" data-markdown>
-	  <textarea data-template>
-	    ## Reconstruction of Euclidean Shapes
-	    ### Sushovan Majhi
-	    Tulane University
-	  </textarea>
+	<section id="title">
+	    <h3><u>Reconstruction of Euclidean Shapes</u></h3>
+	    <h6>Sushovan Majhi</h6>
+	    <span class="green">Tulane University<br>May 5, 2019</span>
 	</section>
 
 	<section>
@@ -83,6 +78,7 @@
     <!-- Scripts to load after DOM -->
     <script src="js/reveal.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/custom.js"></script>
     <script>
       Reveal.initialize({
       controls: true,
@@ -103,8 +99,6 @@
       { src: 'plugin/highlight/highlight.js', async: true },
       { src: 'plugin/notes/notes.js',         async: true },
       { src: 'plugin/math/math.js',           async: true},
-      { src: 'socket.io/socket.io.js',        async: true },
-      { src: 'plugin/notes-server/client.js', async: true },
       ]
       });
     </script>
