@@ -13,17 +13,20 @@
 
 .timeline li {
     list-style: none;
-    border-left: 1px solid green;
+    border-left: 2px dashed red;
     position: relative;
-    padding-left: 15px;
+    padding: 20px;
+    border-bottom: 0.5px solid rgba(168,168,168,0.3);
 }
 
 .timeline li:before {
     content: "•";
     color: #3be57f;
-    font-size: 70px;
+    font-size: 45px;
     position: absolute;
     left: 0;
-    height: 100%;
-    transform: translateX(-50%);
+    top: -20px;
+    bottom: 0;
+    transform: translate(-52%,35%);
+    //transform: translateX();
 }

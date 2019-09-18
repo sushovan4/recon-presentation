@@ -15,27 +15,32 @@
   <body>
     <div class="reveal">
       <div class="slides">
+
+	<!-- Title page -->
 	<section id="title">
 	  <h3><u>Shapes, Data, and Topology</u></h3>
 	  <h6 style="font-style: italic">Sushovan MAJHI</h6>
 	  <span class="green">Tulane University<br>October 8, 2019</span>
 	  <br>
-	  <img width="200" src="https://raw.githubusercontent.com/sushovan4/recon-presentation/master/frame.png"/>
+	  <img width="200"
+	       src="https://raw.githubusercontent.com/sushovan4/recon-presentation/master/frame.png"/>
+	  <br>
+	  <span class="green">smajhi.com/recon-presentation</span>
 	</section>
-
-	<section id="myself" data-background-iframe="https://www.smajhi.com"></section>
+	<!-- Title ends -->
+	
+	<section id="myself" data-timing="-100"
+		 data-background-iframe="https://www.smajhi.com"></section>
 
 	<section id="project">
 	  <h3><u>Project Timeline</u></h3>
 	  <ul class="timeline">
-	    <li class="fragment">Started in 2016-2017</li>
-	    <li class="fragment">Conference: 
+	    <li class="fragment" data-autoslide="1000">Started in <span class="green">2016-2017</span></li>
+	    <li class="fragment" data-autoslide="2000"><span class="green">(Proceedings)</span> 
 	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
-	    <li class="fragment">Arxiv: 
+	    <li class="fragment" data-autoslide="2000"><span class="green">(Arxiv)</span> 
 	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
-	    <li class="fragment">Arxiv: 
-	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
-	    <li class="fragment">Arxiv: 
+	    <li class="fragment" data-autoslide="2000"><span class="green">(Journal Submitted)</span> 
 	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
 	  </ul>
 	</section>
@@ -50,6 +55,7 @@
 	      <span class="green">Computer Science, Tulane</span>
 	    </p>
 	  </section>
+	  
 	  <section id="carola">
 	    <img width="250"
 	      src="https://www.montana.edu/assets/images/a6ewi/image15.jpg" />
@@ -131,7 +137,6 @@
     
     <!-- Scripts to load after DOM -->
     <script src="js/reveal.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
       Reveal.initialize({
@@ -139,7 +144,7 @@
       controlsTutorial: true,
       controlsLayout: 'edge',
       progress: true,
-      defaultTiming: 60,
+      defaultTiming: 120,
       slideNumber: true,
       hash: true,
       keyboard: true,
@@ -153,7 +158,15 @@
       { src: 'plugin/highlight/highlight.js', async: true },
       { src: 'plugin/notes/notes.js',         async: true },
       { src: 'plugin/math/math.js',           async: true},
-      ]
+      <!-- Multiplex -->
+      { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+      { src: 'plugin/multiplex/client.js', async: true }
+      ],
+      multiplex: {
+      secret: null,
+      id: "4b2afa47c6e681e8",
+      url: "https://reveal-js-multiplex-ccjbegmaii.now.sh"
+      }
       });
     </script>
     <!-- Scripts end -->
