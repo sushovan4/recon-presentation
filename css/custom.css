@@ -10,3 +10,20 @@
 .blue {
     color: blue;
 }
+
+.timeline li {
+    list-style: none;
+    border-left: 1px solid green;
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline li:before {
+    content: "•";
+    color: #3be57f;
+    font-size: 70px;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    transform: translateX(-50%);
+}
