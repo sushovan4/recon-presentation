@@ -19,6 +19,11 @@
     border-bottom: 0.5px solid rgba(168,168,168,0.3);
 }
 
+.timeline li:last-child {
+    border-bottom: none;
+}
+
+
 .timeline li:before {
     content: "•";
     color: #3be57f;

@@ -16,7 +16,7 @@
     <div class="reveal">
       <div class="slides">
 
-	<!-- Title page -->
+	<!-- Title -->
 	<section id="title">
 	  <h3><u>Shapes, Data, and Topology</u></h3>
 	  <h6 style="font-style: italic">Sushovan MAJHI</h6>
@@ -29,32 +29,39 @@
 	</section>
 	<!-- Title ends -->
 	
+
+	<!-- Intro -->
 	<section id="myself" data-timing="-100"
 		 data-background-iframe="https://www.smajhi.com"></section>
+	<!-- Intro ends -->
 
+	
+	<!-- Project -->
 	<section id="project">
 	  <h3><u>Project Timeline</u></h3>
 	  <ul class="timeline">
-	    <li class="fragment" data-autoslide="1000">Started in <span class="green">2016-2017</span></li>
+	    <li class="fragment" data-autoslide="1000">Started in
+	      <span class="green">2016-2017</span></li>
 	    <li class="fragment" data-autoslide="2000"><span class="green">(Proceedings)</span> 
 	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
 	    <li class="fragment" data-autoslide="2000"><span class="green">(Arxiv)</span> 
 	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
-	    <li class="fragment" data-autoslide="2000"><span class="green">(Journal Submitted)</span> 
-	      Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</li>
 	  </ul>
 	</section>
+	<!-- Project end -->
 	
+	<!-- People -->
 	<section id="collaborators">
 	  <h3><u>Collaborators</u></h3>
 	  <section id="carola">
 	    <img width="500"
-	      src="https://news.tulane.edu/sites/news/files/080916_carola-wenk800_617_pbc.jpg" />
+		 src="https://news.tulane.edu/sites/news/files/080916_carola-wenk800_617_pbc.jpg" />
 	    <p>
 	      Carola Wenk<br>
 	      <span class="green">Computer Science, Tulane</span>
 	    </p>
 	  </section>
+	  <!-- People ends -->
 	  
 	  <section id="carola">
 	    <img width="250"
@@ -152,21 +159,20 @@
       math: {
       "HTML-CSS" : {webFont: "Neo-Euler"}
       },
+      multiplex: {
+      secret: null,
+      id: "4b2afa47c6e681e8",
+      url: "https://reveal-js-multiplex-ccjbegmaii.now.sh",
+      },
       dependencies: [
-      { src: 'plugin/markdown/marked.js' },
-      { src: 'plugin/markdown/markdown.js' },
       { src: 'plugin/highlight/highlight.js', async: true },
       { src: 'plugin/notes/notes.js',         async: true },
       { src: 'plugin/math/math.js',           async: true},
       <!-- Multiplex -->
       { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
-      { src: 'plugin/multiplex/client.js', async: true }
-      ],
-      multiplex: {
-      secret: null,
-      id: "4b2afa47c6e681e8",
-      url: "https://reveal-js-multiplex-ccjbegmaii.now.sh"
-      }
+      //{ src: 'plugin/multiplex/master.js', async: true },
+      { src: 'plugin/notes-server/client.js', async: true }
+      ]
       });
     </script>
     <!-- Scripts end -->
