@@ -18,7 +18,7 @@
 
 	<!-- Title -->
 	<section id="title">
-	  <h3><u>Shapes, Data, and Topology</u></h3>
+	  <h3><u>Shape Reconstruction</u></h3>
 	  <h6 style="font-style: italic">Sushovan MAJHI</h6>
 	  <span class="green">Tulane University<br>October 8, 2019</span>
 	  <br>
@@ -31,33 +31,63 @@
 	
 
 	<!-- Intro -->
-	<section id="myself" data-timing="-100"
-		 data-background-iframe="https://www.smajhi.com"></section>
+	<section id="myself"
+		 data-background-iframe="https://www.smajhi.com">
+	  <aside class="notes">
+	    
+	  </aside>
+	</section>
 	<!-- Intro ends -->
-
+	
+	<section id="talk">
+	  <h3><u>Manifest of the Talk</u></h3>
+	  <ul class="timeline">
+	    <li class="fragment">
+	      Shape Reconstruction Project
+	    </li>
+	    <li class="fragment">
+	      Demo of the Reconstruction Software
+	    </li>
+	    
+	    <li class="fragment">
+	      How I made this presentation
+	    </li>
+	    <li class="fragment">
+	      &#127829; Pizza, Discussions, and Questions
+	    </li>
+	  </ul>
+	  <aside class="notes">
+	    claims the Lion's share in my thesis.
+	    
+	    Pizza with my favorite toppings of discussions and questions.
+	  </aside>
+	</section>
 	
 	<!-- Project -->
 	<section id="project">
 	  <h3><u>Project Timeline</u></h3>
-	  <ul class="timeline">
+	  <ul class="timeline" style="font-size:0.6em" >
 	    <li class="fragment">
-	      <span class="green">Jan, 2017</span> Started</li>
-	    <li class="fragment">
-	      <span class="green">Nov, 2017</span> 
-	      <div style="font-size: 22px">
-		<b>Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</b><br>
-		<i>Fall Workshop on Computational Geometry 2017, Stony Brook, NY</i>
-	      </div>
+	      <span class="red">2016</span>
+	      Carola's talk on <span class="green">trajectory-based</span> Map Contruction
 	    </li>
 	    <li class="fragment">
-	      <span class="green">Nov, 2018</span>
-	      <div style="font-size: 22px"> 
-		Topological and Geometric Reconstruction of Geodesic Subspaces of $\mathbb{R}^N$
-	      </div>
+	      <span class="red">Jan, 2017</span>
+	      Proposed <span class="green">topological</span> map construction
+	    </li>
+	    
+	    <li class="fragment">
+	      <span class="red">Nov, 2017</span> 
+	      <b>Topological and Geometric Reconstruction of Metric Graphs in $\mathbb{R}^N$</b><br>
+	      <i>Fall Workshop on Computational Geometry 2017, Stony Brook, NY</i>
 	    </li>
 	    <li class="fragment">
-	      <span class="green">May, 2019</span> 
-	      JS-Based Webapp for visualization
+	      <span class="red">Nov, 2018</span>
+	      Topological and Geometric Reconstruction of Geodesic Subspaces of $\mathbb{R}^N$
+	    </li>
+	    <li class="fragment">
+	      <span class="red">May, 2019</span> 
+	      JS-Based Webapp for visualization <span class="green">software</span>
 	    </li>
 	  </ul>
 	</section>
@@ -76,7 +106,7 @@
 	  </section>	  
 	  <section id="brit">
 	    <img width="250"
-	      src="https://www.montana.edu/assets/images/a6ewi/image15.jpg" />
+		 src="https://www.montana.edu/assets/images/a6ewi/image15.jpg" />
 	    <p>
 	      Brittany Fasy<br>
 	      <span class="green">Computer Science, Montana State</span>
@@ -96,6 +126,13 @@
 	<!-- Shape -->
 	<section id="shape">
 	  <h3><u>Shapes</u></h3>
+	  <aside class="notes">
+	    In topology, shapes are distinguished by the topological features they manifest. 
+
+	    The best class of shapes one always hopes to deal with is manifolds.  
+
+	    Then comes the impious brethrens thereof - non-manifold.
+	  </aside>
 	  <section id="manifold">
  	    <img width="300" style="border:none;background:none" src="path.png" />
 	    <img width="200" style="border:none;background:none" src="circle.png" />
@@ -118,8 +155,23 @@
 	</section>
 	<!-- Shape ends -->
 	
+	<section>
+	  <h3><u>Problem Statement</u></h3> We aim to reconstruct
+	  an <span class="red">unknown</span> shape $X$.
+	  <br>
+	  <ul class="timeline" style="font-size: 0.6em">
+	    <li class="fragment">$X$ is a (compact) non-manifold</li>
+	    <li class="fragment">$X$ is a geodesic space</li>
+	    <li class="fragment">We have a sample or
+	      a <span class="green">point-cloud</span> $S$ represented as a
+	      metric space$(S,d_S)$
+	    </li>
+	    <li class="fragment">$S$ is expected to be "dense" in $X$</li>
+	  </ul>
+	</section>
+
 	<section id="sampling">
-	  <h3><u>Shape <span class="green">⟶</span> Data</u></h3>
+	  <h3><u>Shape <span class="green">⟶</span> Sample</u></h3>
 	  <section>
 	    <img width="500" style="border:none;background:none" src="click.jpg" />
 	    <br>
@@ -130,17 +182,17 @@
 	    <br><br>
 	    Road <span class="green">⟶</span> GPS locations 
 	  </section>
-	  <section>
-	    Let $(X,d_X)$ be an <span class="red">unknown</span> metric space.
-	    <br>
-	    <ul class="timeline">
-	      <li class="fragment">A sample is represented as a metric space$(S,d_S)$</li>
-	      <li class="fragment">A sample is also called a
-		<span class="green">point-cloud</span></li>
-	      <li class="fragment">$S$ is expected to be "dense" in $X$</li>
-	      <li class="fragment">We assume <span class="green">Hausdorff</span> density</li>
-	    </ul>
-	  </section>
+	</section>
+
+	<section>
+	  <h3><u>Map Reconstruction</u></h3> Let $G$ be the unknown map of a city.
+	  <br>
+	  <ul class="timeline" style="font-size: 0.8em">
+	    <li class="fragment">$G$ is an embedded graph</li>
+	    <li class="fragment">$G$ has the shortest-path metric</li>
+	    <li class="fragment">$S$ is the GPS locations of cars</li>
+	    <li class="fragment">$S$ is reasonably close to $G$</li>
+	  </ul>
 	</section>
 	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
 	
