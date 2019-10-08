@@ -69,7 +69,7 @@
 	  <ul class="timeline" style="font-size:0.6em" >
 	    <li class="fragment">
 	      <span class="red">2016</span>
-	      Carola's talk on <span class="green">trajectory-based</span> Map Contruction
+	      Carola's talk on <span class="green">trajectory-based</span> Map Construction
 	    </li>
 	    <li class="fragment">
 	      <span class="red">Jan, 2017</span>
@@ -131,7 +131,7 @@
 
 	    The best class of shapes one always hopes to deal with is manifolds.  
 
-	    Then comes the impious brethrens thereof - non-manifold.
+	    Then comes the impious brethren thereof - non-manifold.
 	  </aside>
 	  <section id="manifold">
  	    <img width="300" style="border:none;background:none"
@@ -178,17 +178,20 @@
 	<section id="sampling">
 	  <h3><u>Shape <span class="green">⟶</span> Sample</u></h3>
 	  <section>
-	    <img width="500" style="border:none;background:none" src="click.jpg" />
+	    <img width="500" style="border:none;background:none"
+		 src="https://raw.githubusercontent.com/sushovan4/recon-presentation/master/click.jpg" />
 	    <br>
 	    continuous object <span class="green">⟶</span> Array of rgb pixels
 	  </section>
 	  <section>
-	    <img width="700" style="border:none;background:none" src="gps.jpg" />
+	    <img width="700" style="border:none;background:none"
+		 src="https://raw.githubusercontent.com/sushovan4/recon-presentation/master/gps.jpg" />
 	    <br><br>
 	    Road <span class="green">⟶</span> GPS locations 
 	  </section>
 	</section>
-
+	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
+	
 	<section>
 	  <h3><u>Map Reconstruction</u></h3> Let $G$ be the unknown map of a city.
 	  <br>
@@ -199,51 +202,66 @@
 	    <li class="fragment">$S$ is reasonably close to $G$</li>
 	  </ul>
 	</section>
-	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
 	
 	<section id="reconstruction">
 	  <h3><u>Data <span class="green">⟶</span> Shape</u></h3>
-	  <section id="rips">
-	    <img width="200" style="margin:50px;border:none;background:none" src="data.png" />
-	    
-	    <span class="green">⟶</span>
-	    
-	    <img width="200" style="margin:50px;border:none;background:none" src="rips.png" />
-	    <h6>Vietoris-Rips at scale $\epsilon>0$</h6>
-	  </section>
-	  <section id="cech">
-	    <img width="200" style="margin:50px;border:none;background:none" src="data.png" />
-	    
-	    <span class="green">⟶</span>
-	    
-	    <img width="200" style="margin:50px;border:none;background:none" src="rips.png" />
-	    <h6>Čech Complex at scale $\epsilon>0$</h6>
-	  </section>
+	  <h6>Vietoris-Rips at scale $\epsilon>0$</h6>
+	  <img width="200" style="margin:50px;border:none;background:none" src="data.png" />
+	  
+	  <span class="green">⟶</span>
+	  
+	  <img width="200" style="margin:50px;border:none;background:none" src="rips.png" />
+	  <definition>
+	    In a metric space $(M,d)$, each subset $A$ size $k$ with
+	    $diam_d(A)<\epsilon$ is a $(k-1)$-simplex.
+	  </definition>
+	</section>
+	
+	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
+	
+	<section id="manifold-recon">
+	  <h3><u>Manifold Reconstruction</u></h3>
+	    (Adams H. et al.)
+	    <br>
+	    small $\epsilon$ + dense sample
+	    <br>=<br>
+	    Rips complex is a good reconstruction for <span class="green">manifolds</span>
 	</section>
 	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
 
+	<section id="graph-recon">
+	  <h3><u>Graph Reconstruction</u></h3>
+	  small $\epsilon$ + dense sample trick
+	  <br><span class="red">does not work</span><br>
+	  &#128546;
+	</section>
+	<section data-background-iframe="https://smajhi.com/shape-reconstruction"></section>
+	
 	<section>
 	  <h3><u>The Reconstruction Library</u></h3>
 	  <ul class="timeline">
 	    <li class="fragment">I call it <span class="green">Shape Reconstruction</span></li>
 	    <li class="fragment">Language: <span class="green">JavaScript</span></li>
 	    <li class="fragment">Platform: (modern) Web Browsers</li>
-	    <li class="fragment">Hosted on Github Pages</li>
+	    <li class="fragment">Hosted on <span class="green">Github</span></li>
+	  </ul>
 	</section>
-	<section data-background-iframe="http://github.com/sushovan4/shape-reconstruction"></section>
 	
 	<section>
 	  <h3><u>This Presentation</u></h3>
-	  <span class="green">ReVeal</span> is a JS based presentation
-	  framework. It runs on browsers.
-	  <br>
-	  Multiplex URL:<br>
-	  <span class="green">https://reveal-js-multiplex-ccjbegmaii.now.sh</span>
+	  <ul class="timeline">
+	    <li class="fragment">The framework is
+	      called <span class="green">RevealJS</span>
+	    </li>
+	    <li class="fragment">Language: <span class="green">JavaScript</span></li>
+	    <li class="fragment">Platform: (modern) Web Browsers</li>
+	    <li class="fragment">Latex Support: <span class="green">MathJax</span></li>
+	    <li class="fragment">Features: Multiplexing, Notes, Timer, Autoslide, and more.
+	  </ul>
 	</section>
 	
 	<section id="thanks">
-	  Questions?
-	  
+	  The speaker will now accept Questions
 	  <h1>🤔</h1>
 	</section>
       </div>

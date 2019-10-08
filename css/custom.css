@@ -1,5 +1,14 @@
 /* This is my custom CSS file */
-
+definition,theorem {
+    font-family: roman;
+    padding: 10px;
+    font-style: italic;
+    font-size: 0.7em;
+    display: block;
+    background: rgb(40,50,10);
+    color: white;
+    font-weight: normal;
+}
 .green {
     color: #3be57f;
 }
