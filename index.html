@@ -263,22 +263,8 @@
       "HTML-CSS" : {webFont: "Neo-Euler"}
       },
       <!-- Uncomment if master -->
-      multiplex: {
-      secret: "1568825019888400408",
-      id: "4b2afa47c6e681e8",
-      url: "https://reveal-js-multiplex-ccjbegmaii.now.sh",
-      },
-      dependencies: [
-      { src: 'plugin/highlight/highlight.js', async: true },
-      { src: 'plugin/notes/notes.js',         async: true },
-      { src: 'plugin/math/math.js',           async: true},
-      { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js',async: true },
-      { src: 'plugin/multiplex/master.js', async: true },
-      { src: 'plugin/notes-server/client.js', async: true }
-      ],
-      <!-- Uncomment if client -->
       <!-- multiplex: { -->
-      <!-- secret: null, -->
+      <!-- secret: "1568825019888400408", -->
       <!-- id: "4b2afa47c6e681e8", -->
       <!-- url: "https://reveal-js-multiplex-ccjbegmaii.now.sh", -->
       <!-- }, -->
@@ -287,8 +273,22 @@
       <!-- { src: 'plugin/notes/notes.js',         async: true }, -->
       <!-- { src: 'plugin/math/math.js',           async: true}, -->
       <!-- { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js',async: true }, -->
-      <!-- { src: 'plugin/multiplex/client.js', async: true } -->
+      <!-- { src: 'plugin/multiplex/master.js', async: true }, -->
+      <!-- { src: 'plugin/notes-server/client.js', async: true } -->
       <!-- ], -->
+      <!-- Uncomment if client -->
+      multiplex: {
+      secret: null,
+      id: "4b2afa47c6e681e8",
+      url: "https://reveal-js-multiplex-ccjbegmaii.now.sh",
+      },
+      dependencies: [
+      { src: 'plugin/highlight/highlight.js', async: true },
+      { src: 'plugin/notes/notes.js',         async: true },
+      { src: 'plugin/math/math.js',           async: true},
+      { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js',async: true },
+      { src: 'plugin/multiplex/client.js', async: true }
+      ],
       });
     </script>
     <!-- Scripts end -->
